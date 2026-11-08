@@ -17,8 +17,9 @@ npm run dev
 
 ## Placeholders to replace before launch
 - Pricing: `price` fields in `src/data/products.js`, wholesale and referral notes in `src/pages/agencies.astro`
-- Tally form: comment block in `src/pages/contact.astro`
-- Contact email: `hello@radiusads.biz` in `src/pages/contact.astro`
 - Example figures (+X.X%): `src/pages/example.astro`, `src/components/HeroVisual.astro`
 - Privacy policy and contest rules links: `src/pages/privacy.astro`
-- GA4 tag: comment in `src/layouts/Layout.astro`
+
+## Live integrations
+- Tally contact form: rDBWNv (`src/pages/contact.astro`)
+- Google Analytics: G-1XC6FYLPZZ (`src/layouts/Layout.astro`)
