@@ -1,0 +1,41 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Layout title="Privacy & Compliance" description="How RadiusAds uses privacy-compliant, anonymized location data and survey responses in line with PIPEDA and Quebec Law 25.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Privacy &amp; Compliance</div>
+      <span class="eyebrow">Privacy &amp; compliance</span>
+      <h1>Privacy is built in, not bolted on</h1>
+      <p class="lead">Our research depends on trust. Here is how we handle location data and survey responses.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card"><div class="icon-badge"><Icon name="shield" /></div><h3>No personal information</h3><p>Location data is tied to anonymous mobile advertising IDs, never to names, emails, phone numbers or addresses.</p></div>
+        <div class="card"><div class="icon-badge"><Icon name="check" /></div><h3>Opt-in sources</h3><p>Device data comes from sources where users have consented to location sharing. Activation audiences are drawn only from opt-in devices.</p></div>
+        <div class="card"><div class="icon-badge"><Icon name="layers" /></div><h3>Aggregated reporting</h3><p>Results are reported as aggregated, indexed trends. No individual's movements or responses are ever reported.</p></div>
+        <div class="card"><div class="icon-badge"><Icon name="doc" /></div><h3>PIPEDA and Law 25</h3><p>We follow federal privacy law and Quebec Law 25. Quebec device data is excluded where the required consent signals are not present.</p></div>
+        <div class="card"><div class="icon-badge"><Icon name="users" /></div><h3>Voluntary surveys</h3><p>Survey participation is voluntary, with a clear privacy notice up front. Any incentive contest is no-purchase-necessary with published rules.</p></div>
+        <div class="card"><div class="icon-badge"><Icon name="pin" /></div><h3>Canadian data residency</h3><p>Study data is encrypted in transit and at rest and stored in Canadian data centres.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container narrow prose">
+      <h2>Questions about privacy?</h2>
+      <p>If you are a client, procurement team or survey participant with a question about how data is handled, contact us and we will respond promptly.</p>
+      <p><a href="/contact?type=privacy">Contact our privacy team</a></p>
+      <p class="note">[Placeholder: link to full privacy policy and contest rules once finalized.]</p>
+    </div>
+  </section>
+
+  <CtaBand />
+</Layout>
+
+<style>.narrow { max-width: 820px; }</style>

@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Layout title="For Agencies" description="Co-pitch or white-label location-verified brand research. RadiusAds does not buy media, so agencies keep 100% of the media budget.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / For Agencies</div>
+      <span class="eyebrow">For agencies</span>
+      <h1>Your plan. Our proof.</h1>
+      <p class="lead">RadiusAds gives agencies independent research and measurement that wins pitches and defends plans, without ever touching your media budget.</p>
+      <div class="btn-row" style="margin-top:28px">
+        <a href="/contact?type=agency" class="btn btn-primary">Talk Partnership</a>
+        <a href="/contact?type=sample" class="btn btn-secondary">Request a Sample Report</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon-badge"><Icon name="scale" /></div>
+          <h3>No conflict</h3>
+          <p>We do not buy or sell media. You keep 100% of execution and commission; we provide third-party validation your client can trust.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge"><Icon name="target" /></div>
+          <h3>De-risk the plan</h3>
+          <p>Test creative and messaging on the exact audience the client wants to win before the media budget is committed.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge"><Icon name="doc" /></div>
+          <h3>Win the pitch</h3>
+          <p>Bring audience insight and a measurement plan grounded in real-world behaviour into new business and RFP responses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Ways to work together</span>
+        <h2>Pick the model that fits the client</h2>
+      </div>
+      <div class="grid grid-3 models">
+        <div class="card">
+          <span class="pill">Co-pitch</span>
+          <h3>Bring us in</h3>
+          <p>We join as your independent research partner, under the RadiusAds name, to add credibility in pitches and reviews.</p>
+          <ul class="checklist"><li>Joint pitch materials</li><li>Methodology support in client meetings</li><li>RadiusAds-branded reports</li></ul>
+        </div>
+        <div class="card featured">
+          <span class="pill">White-label</span>
+          <h3>Your brand on it</h3>
+          <p>Offer our studies as your own research product. We run the study; you own the client relationship and the deliverable.</p>
+          <ul class="checklist"><li>Reports in your agency branding</li><li>Wholesale pricing (placeholder)</li><li>No RadiusAds client contact unless you want it</li></ul>
+        </div>
+        <div class="card">
+          <span class="pill">Referral</span>
+          <h3>Hand it off</h3>
+          <p>Refer a client who needs measurement and we will work with them directly, keeping you informed throughout.</p>
+          <ul class="checklist"><li>Referral fee (placeholder)</li><li>Agency kept in the loop</li><li>No impact on your media scope</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <span class="eyebrow">Where it fits</span>
+      <h2>Studies agencies use most</h2>
+      <ul class="checklist big">
+        <li><strong>Creative Testing</strong> before launch, to pick the concept with evidence instead of opinion.</li>
+        <li><strong>Brand Lift</strong> for out-of-home, DOOH and sponsorship buys that digital tools cannot measure.</li>
+        <li><strong>Footfall Attribution</strong> to show the client the campaign drove real visits.</li>
+        <li><strong>Awareness Studies</strong> as a baseline in new-business pitches and annual planning.</li>
+      </ul>
+    </div>
+  </section>
+
+  <CtaBand title="Let's build your research offering." text="Tell us about your clients and the questions they keep asking. We will show you how RadiusAds fits." />
+</Layout>
+
+<style>
+  .models h3 { margin-top: 12px; }
+  .models .checklist { margin-top: 18px; font-size: .95rem; }
+  .featured { border: 2px solid var(--green); }
+  .narrow { max-width: 820px; }
+  .big li { margin-bottom: 16px; }
+</style>

@@ -1,0 +1,21 @@
+---
+interface Props { title?: string; text?: string }
+const {
+  title = 'Ready to measure what really moved?',
+  text = 'Tell us what you need to know. We will scope a study around your audience, your markets and your timeline.',
+} = Astro.props;
+---
+<section class="section tight">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
+      <div class="btn-row">
+        <a href="/contact" class="btn btn-light">Start a Study</a>
+        <a href="/contact?type=sample" class="btn btn-ghost-light">Request a Sample Report</a>
+      </div>
+    </div>
+  </div>
+</section>

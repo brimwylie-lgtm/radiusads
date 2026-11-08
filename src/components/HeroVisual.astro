@@ -1,0 +1,68 @@
+<div class="hv" aria-hidden="true">
+  <svg viewBox="0 0 520 460" class="map">
+    <defs>
+      <pattern id="grid" width="26" height="26" patternUnits="userSpaceOnUse">
+        <path d="M26 0H0V26" fill="none" stroke="#DCE8E3" stroke-width="1"/>
+      </pattern>
+    </defs>
+    <rect width="520" height="460" rx="22" fill="#F6F9F8"/>
+    <rect width="520" height="460" rx="22" fill="url(#grid)"/>
+    <path d="M0 300 C120 270 200 340 330 300 S470 250 520 270" stroke="#fff" stroke-width="14" fill="none"/>
+    <path d="M210 0 C230 120 190 220 240 460" stroke="#fff" stroke-width="12" fill="none"/>
+    <circle cx="250" cy="230" r="170" fill="#1D9E75" fill-opacity=".05" stroke="#1D9E75" stroke-opacity=".25" stroke-width="2" stroke-dasharray="6 7"/>
+    <circle cx="250" cy="230" r="105" fill="#1D9E75" fill-opacity=".07" stroke="#1D9E75" stroke-opacity=".45" stroke-width="2"/>
+    <circle cx="250" cy="230" r="46" fill="#1D9E75" fill-opacity=".14" stroke="#1D9E75" stroke-width="2.5"/>
+    <line x1="250" y1="230" x2="370" y2="110" stroke="#12302A" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="372" cy="108" r="7" fill="#E8621A"/>
+    <g fill="#1D9E75">
+      <circle cx="180" cy="190" r="5"/><circle cx="300" cy="170" r="5"/><circle cx="320" cy="280" r="5"/>
+      <circle cx="200" cy="290" r="5"/><circle cx="150" cy="240" r="5"/><circle cx="345" cy="225" r="5"/>
+      <circle cx="270" cy="320" r="5"/><circle cx="230" cy="150" r="5"/>
+    </g>
+    <g fill="#E8621A">
+      <circle cx="120" cy="120" r="5"/><circle cx="410" cy="330" r="5"/><circle cx="95" cy="330" r="5"/><circle cx="430" cy="160" r="5"/>
+    </g>
+    <path d="M250 252 s-17-15-17-28 a17 17 0 0 1 34 0 c0 13-17 28-17 28z" fill="#E8621A"/>
+    <circle cx="250" cy="224" r="6" fill="#fff"/>
+  </svg>
+
+  <div class="float f1">
+    <span class="lbl">Brand lift</span>
+    <div class="bars">
+      <div><span>Control</span><i style="width:46%"></i></div>
+      <div><span>Exposed</span><i class="hi" style="width:72%"></i></div>
+    </div>
+    <span class="tag">Illustrative</span>
+  </div>
+
+  <div class="float f2">
+    <span class="lbl">Incremental visits</span>
+    <strong>+X.X%</strong>
+    <span class="sub">vs. matched control</span>
+  </div>
+
+  <div class="float f3">
+    <span class="lbl">Concept test</span>
+    <div class="abc"><b>A</b><b class="win">B</b><b>C</b></div>
+  </div>
+</div>
+
+<style>
+  .hv { position: relative; width: 100%; max-width: 540px; margin-left: auto; }
+  .map { width: 100%; height: auto; border-radius: 22px; box-shadow: 0 30px 60px rgba(18,48,42,.12); }
+  .float { position: absolute; background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; box-shadow: 0 16px 36px rgba(18,48,42,.12); font-size: .82rem; }
+  .lbl { display: block; font-family: var(--font-display); font-weight: 700; color: var(--ink); font-size: .85rem; margin-bottom: 8px; }
+  .f1 { left: -28px; bottom: 36px; width: 210px; }
+  .bars div { display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 8px; margin-bottom: 6px; color: var(--muted); }
+  .bars i { display: block; height: 9px; border-radius: 5px; background: #CFE1DA; }
+  .bars i.hi { background: var(--green); }
+  .tag { font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+  .f2 { right: -18px; top: 28px; }
+  .f2 strong { display: block; font-family: var(--font-display); font-size: 1.7rem; color: var(--orange); line-height: 1; }
+  .f2 .sub { color: var(--muted); }
+  .f3 { right: 24px; bottom: -22px; }
+  .abc { display: flex; gap: 6px; }
+  .abc b { width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; background: var(--bg-alt); color: var(--muted); font-family: var(--font-display); }
+  .abc b.win { background: var(--green); color: #fff; }
+  @media (max-width: 960px) { .hv { margin: 40px auto 0; } .f1 { left: 8px; } .f2 { right: 8px; } }
+</style>

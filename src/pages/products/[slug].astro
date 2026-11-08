@@ -1,0 +1,116 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Icon from '../../components/Icon.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { products, addOns } from '../../data/products.js';
+
+export function getStaticPaths() {
+  return products.map((p) => ({ params: { slug: p.slug }, props: { p } }));
+}
+const { p } = Astro.props;
+const others = products.filter((o) => o.slug !== p.slug);
+---
+<Layout title={p.name} description={`${p.name}: ${p.tagline}`}>
+  <section class="page-hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="breadcrumb"><a href="/">Home</a> / <a href="/#studies">Studies</a> / {p.name}</div>
+        <div class="icon-badge"><Icon name={p.icon} /></div>
+        <h1>{p.name}</h1>
+        <p class="lead">{p.tagline}</p>
+        <div class="btn-row" style="margin-top:28px">
+          <a href={`/contact?study=${p.slug}`} class="btn btn-primary">Scope a Study</a>
+          <a href="/contact?type=sample" class="btn btn-secondary">Request a Sample Report</a>
+        </div>
+      </div>
+      <aside class="q-card">
+        <span class="eyebrow">The question it answers</span>
+        <p class="q">"{p.question}"</p>
+        <div class="price">
+          <span>Pricing</span>
+          <strong>{p.price}</strong>
+          <small>Final pricing depends on audience, markets and sample size.</small>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <p class="intro">{p.intro}</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Four steps, start to finish</h2>
+      </div>
+      <div class="steps">
+        {p.how.map(([t, d]) => <div class="step"><h3>{t}</h3><p>{d}</p></div>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2 two">
+      <div>
+        <span class="eyebrow">What you get</span>
+        <h2>Deliverables</h2>
+        <ul class="checklist">{p.outputs.map((o) => <li>{o}</li>)}</ul>
+      </div>
+      <div>
+        <span class="eyebrow">Typical uses</span>
+        <h2>When to use it</h2>
+        <ul class="checklist">{p.uses.map((o) => <li>{o}</li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Add-ons</span>
+        <h2>Go further</h2>
+      </div>
+      <div class="grid grid-4">
+        {addOns.map(([t, d]) => <div class="card"><h3>{t}</h3><p>{d}</p></div>)}
+      </div>
+      <p class="note" style="margin-top:20px">Add-on pricing: placeholder, quoted per study.</p>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container">
+      <h3>Other studies</h3>
+      <div class="grid grid-3" style="margin-top:20px">
+        {others.map((o) => (
+          <a href={`/products/${o.slug}`} class="card other">
+            <div class="icon-badge"><Icon name={o.icon} /></div>
+            <h3>{o.name}</h3>
+            <p>{o.short}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Layout>
+
+<style>
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
+  .q-card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 32px; box-shadow: 0 20px 44px rgba(18,48,42,.08); }
+  .q { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--ink); line-height: 1.35; }
+  .price { border-top: 1px solid var(--line); padding-top: 18px; margin-top: 8px; }
+  .price span { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); }
+  .price strong { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--orange); }
+  .price small { color: var(--muted); }
+  .narrow { max-width: 820px; }
+  .intro { font-size: 1.3rem; line-height: 1.6; color: var(--ink); margin: 0; }
+  .two { gap: 56px; }
+  .other { text-decoration: none; color: inherit; }
+  .other:hover { border-color: var(--green); }
+</style>

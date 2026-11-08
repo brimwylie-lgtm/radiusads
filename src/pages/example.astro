@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Layout title="Example Study" description="An illustrative RadiusAds program: creative testing, brand lift and footfall attribution for a home improvement retailer targeting competitor shoppers.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Example Study</div>
+      <span class="eyebrow">Illustrative scenario</span>
+      <h1>Winning a competitor's shoppers, start to finish</h1>
+      <p class="lead">How a national home improvement retailer could use RadiusAds to choose its creative, then prove the campaign worked.</p>
+      <p class="disclaimer">This is a hypothetical example to show how our studies work together. Figures shown are placeholders, not client results.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <h2>The challenge</h2>
+      <p>A national home improvement retailer wants to grow share in Ontario by attracting people who currently shop its two biggest competitors. Before committing a major quarterly media budget, the marketing team needs to know which message will move those shoppers, and afterwards, whether the campaign actually changed perception and drove visits.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="timeline">
+        <div class="t">
+          <span class="phase">Phase 1</span>
+          <h3>Audience</h3>
+          <p>Devices seen repeatedly at competitor locations in Ontario over the past 90 days form the target audience. A matched comparison group is built from the same regions.</p>
+        </div>
+        <div class="t">
+          <span class="phase">Phase 2</span>
+          <h3>Creative Testing</h3>
+          <p>Three concepts are tested with competitor shoppers: price and promotions, quality and warranty, and convenience. Each respondent sees one concept at random.</p>
+          <div class="result"><span>Winning concept</span><strong>Concept B</strong><small>+XX% purchase intent vs. other concepts</small></div>
+        </div>
+        <div class="t">
+          <span class="phase">Phase 3</span>
+          <h3>Brand Lift</h3>
+          <p>The agency runs the campaign with Concept B. Competitor shoppers with an opportunity to see it are surveyed alongside a matched unexposed group.</p>
+          <div class="result"><span>Brand favourability</span><strong>+XX.X%</strong><small>exposed vs. control</small></div>
+        </div>
+        <div class="t">
+          <span class="phase">Phase 4</span>
+          <h3>Footfall Attribution</h3>
+          <p>Over a 30-day post-exposure window, visits to the retailer's stores are compared between exposed and control groups.</p>
+          <div class="result"><span>Incremental visits</span><strong>+X.X%</strong><small>exposed vs. control</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow">
+      <h2>What the client receives</h2>
+      <ul class="checklist">
+        <li>An executive report covering creative ranking, brand lift and visitation lift, with significance testing throughout</li>
+        <li>A clear recommendation on what to keep, change or scale for the next flight</li>
+        <li>Optional retargeting audiences from opt-in devices matching the competitor-shopper profile, ready for the agency's DSP</li>
+      </ul>
+      <p>Each study can also be purchased on its own. Most clients start with one and add others as they see results.</p>
+    </div>
+  </section>
+
+  <CtaBand title="Have a similar question?" text="Tell us the audience you want to win and the decision you need to make." />
+</Layout>
+
+<style>
+  .narrow { max-width: 820px; }
+  .disclaimer { display: inline-block; margin-top: 20px; font-size: .9rem; color: var(--orange-dark); background: var(--orange-tint); padding: 8px 14px; border-radius: 8px; }
+  .timeline { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  @media (max-width: 960px) { .timeline { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 640px) { .timeline { grid-template-columns: 1fr; } }
+  .t { background: #fff; border: 1px solid var(--line); border-top: 4px solid var(--green); border-radius: var(--radius); padding: 24px; display: flex; flex-direction: column; }
+  .phase { font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--orange); }
+  .t h3 { margin: 6px 0 10px; }
+  .t p { font-size: .95rem; }
+  .result { margin-top: auto; background: var(--green-tint); border-radius: 10px; padding: 14px; }
+  .result span { display: block; font-size: .8rem; color: var(--muted); }
+  .result strong { display: block; font-family: var(--font-display); font-size: 1.5rem; color: var(--green-dark); }
+  .result small { color: var(--muted); }
+</style>

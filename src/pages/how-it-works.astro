@@ -1,0 +1,109 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Layout title="How It Works" description="How RadiusAds builds location-verified audiences, measures exposure and delivers statistically tested brand research.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / How It Works</div>
+      <span class="eyebrow">Methodology</span>
+      <h1>Real-world behaviour, rigorous research</h1>
+      <p class="lead">Every RadiusAds study combines privacy-compliant location data with proven research methods. Here is how the pieces fit together.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container stack">
+      <div class="row">
+        <div class="num">01</div>
+        <div>
+          <h2>Location-verified audiences</h2>
+          <p>We start with a graph of more than 40 million privacy-compliant Canadian mobile devices and up to 24 months of location history. Instead of asking people what they do, we define audiences by what they have actually done: visited a competitor, attended a venue, shopped a category or lived in a trade area.</p>
+          <ul class="checklist"><li>Customers and competitor customers</li><li>Venue, event and destination visitors</li><li>Custom trade areas and regions</li></ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="num">02</div>
+        <div>
+          <h2>Opportunity to see</h2>
+          <p>For brand lift and footfall studies, we identify devices that had an opportunity to see your media based on their presence near screens, boards, venues or targeted areas during the campaign. This makes measurement possible for out-of-home and venue media that pixels cannot reach.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="num">03</div>
+        <div>
+          <h2>Matched control groups</h2>
+          <p>Every lift result is measured against a comparable control: devices with a similar profile and geography that were not exposed. The difference between the two is what the campaign actually caused.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="num">04</div>
+        <div>
+          <h2>Unbranded surveys</h2>
+          <p>Respondents answer short surveys in a neutral environment that does not reveal the sponsoring brand. For creative tests, each respondent is randomly shown one concept so comparisons are fair. Participation is voluntary and incentives are run through compliant, no-purchase-necessary contests.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="num">05</div>
+        <div>
+          <h2>Quality and significance</h2>
+          <p>Responses are screened for speeders, duplicates and low-quality answers. Results are tested for statistical significance and reported with confidence levels, so you know which differences are real.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="num">06</div>
+        <div>
+          <h2>Clear deliverables</h2>
+          <p>You receive an executive-ready report with the answer up front, supporting detail behind it, and recommendations. Visitation results are shown as indexed trends and lift, not raw headcounts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Panels vs. RadiusAds</h2>
+      </div>
+      <div class="compare">
+        <div class="col">
+          <h3>Traditional panels</h3>
+          <ul>
+            <li>Respondents chosen by willingness to take surveys</li>
+            <li>Behaviour is self-reported</li>
+            <li>Hard to reach competitor customers specifically</li>
+            <li>No link to out-of-home exposure or store visits</li>
+          </ul>
+        </div>
+        <div class="col us">
+          <h3><Icon name="check" size={20} /> RadiusAds</h3>
+          <ul>
+            <li>Respondents chosen by verified real-world behaviour</li>
+            <li>Behaviour is observed, perception is surveyed</li>
+            <li>Any audience defined by where people go</li>
+            <li>Exposure and visits measured from location data</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
+</Layout>
+
+<style>
+  .stack { max-width: 880px; }
+  .row { display: grid; grid-template-columns: 80px 1fr; gap: 24px; padding: 36px 0; border-bottom: 1px solid var(--line); }
+  .row:last-child { border-bottom: 0; }
+  .num { font-family: var(--font-display); font-weight: 800; font-size: 2rem; color: var(--green); line-height: 1; }
+  .row h2 { font-size: 1.5rem; }
+  @media (max-width: 640px) { .row { grid-template-columns: 1fr; gap: 8px; } }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 920px; margin: 0 auto; }
+  @media (max-width: 760px) { .compare { grid-template-columns: 1fr; } }
+  .col { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; }
+  .col ul { padding-left: 1.1em; margin: 0; }
+  .col li { margin-bottom: 10px; }
+  .col.us { border: 2px solid var(--green); }
+  .col.us h3 { display: flex; align-items: center; gap: 8px; color: var(--green-dark); }
+</style>

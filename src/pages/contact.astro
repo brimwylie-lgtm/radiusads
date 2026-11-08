@@ -1,0 +1,65 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+---
+<Layout title="Contact" description="Start a study or request a sample report from RadiusAds.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Contact</div>
+      <span class="eyebrow">Get started</span>
+      <h1>Let's scope your study</h1>
+      <p class="lead">Tell us a little about what you need to know. We will come back within one business day with next steps or a sample report.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="form-wrap">
+        <!--
+          TALLY FORM PLACEHOLDER
+          Replace this block with the new Tally embed, e.g.:
+          <iframe data-tally-src="https://tally.so/embed/XXXXXX?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                  loading="lazy" width="100%" height="600" frameborder="0" title="Start a Study"></iframe>
+          <script async src="https://tally.so/widgets/embed.js"></script>
+          Suggested fields: Name, Company, Email, I am a (Brand / Agency / Other),
+          Study of interest (Awareness / Brand Lift / Creative Testing / Footfall / Not sure),
+          Markets, Timing, What do you want to find out?
+        -->
+        <div class="placeholder">
+          <Icon name="doc" size={40} />
+          <h3>Contact form coming soon</h3>
+          <p>The new Tally form will be embedded here.</p>
+        </div>
+      </div>
+      <aside class="side">
+        <div class="card">
+          <h3>What happens next</h3>
+          <ol>
+            <li>We review your goals and audience</li>
+            <li>A short call to confirm scope</li>
+            <li>A proposal with timing and pricing</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Agencies</h3>
+          <p>Ask about co-pitch and white-label options.</p>
+          <a href="/agencies">Agency options</a>
+        </div>
+        <div class="card">
+          <h3>Email</h3>
+          <p><a href="mailto:hello@radiusads.biz">hello@radiusads.biz</a> <span class="note">(placeholder)</span></p>
+        </div>
+      </aside>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: start; }
+  @media (max-width: 860px) { .contact-grid { grid-template-columns: 1fr; } }
+  .placeholder { border: 2px dashed var(--line); border-radius: 18px; padding: 80px 32px; text-align: center; color: var(--muted); display: grid; justify-items: center; gap: 4px; background: var(--bg-alt); }
+  .placeholder h3 { margin: 12px 0 0; }
+  .side { display: grid; gap: 18px; }
+  .side ol { padding-left: 1.2em; margin: 0; }
+  .side li { margin-bottom: 6px; }
+</style>

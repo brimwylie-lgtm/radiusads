@@ -1,0 +1,21 @@
+---
+interface Props { inverse?: boolean; size?: number }
+const { inverse = false, size = 36 } = Astro.props;
+const ink = inverse ? '#ffffff' : '#12302A';
+const ring = inverse ? '#ffffff' : '#1D9E75';
+---
+<span class="logo" aria-label="RadiusAds">
+  <svg width={size} height={size} viewBox="0 0 48 48" aria-hidden="true">
+    <circle cx="20" cy="28" r="17" fill="none" stroke={ring} stroke-opacity=".3" stroke-width="3"/>
+    <circle cx="20" cy="28" r="9.5" fill="none" stroke={ring} stroke-width="3"/>
+    <line x1="20" y1="28" x2="33" y2="15" stroke={ink} stroke-width="3" stroke-linecap="round"/>
+    <circle cx="34.5" cy="13.5" r="4.5" fill="#E8621A"/>
+    <circle cx="20" cy="28" r="3.6" fill="#E8621A"/>
+  </svg>
+  <span class="word" style={`color:${ink}`}>Radius<span style={`color:${inverse ? '#9FE3C9' : '#1D9E75'}`}>Ads</span></span>
+</span>
+
+<style>
+  .logo { display: inline-flex; align-items: center; gap: .55rem; }
+  .word { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; letter-spacing: -.02em; }
+</style>

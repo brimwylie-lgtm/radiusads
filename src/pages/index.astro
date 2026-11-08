@@ -1,0 +1,173 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroVisual from '../components/HeroVisual.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { products } from '../data/products.js';
+---
+<Layout title="Home">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Brand research &amp; measurement</span>
+        <h1>Research the people who <span class="hl">actually show up.</span></h1>
+        <p class="lead">RadiusAds measures awareness, brand lift, creative performance and store visits using audiences verified by real-world location behaviour. Not panels. Not guesswork.</p>
+        <div class="btn-row">
+          <a href="/contact" class="btn btn-primary">Start a Study <Icon name="arrow" size={18} /></a>
+          <a href="#studies" class="btn btn-secondary">Explore Studies</a>
+        </div>
+        <ul class="proof">
+          <li><strong>40M+</strong><span>Canadian mobile devices</span></li>
+          <li><strong>24 mo</strong><span>location history</span></li>
+          <li><strong>100%</strong><span>privacy-compliant</span></li>
+        </ul>
+      </div>
+      <HeroVisual />
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">The problem</span>
+        <h2>Most brand research measures the wrong people, or measures them the wrong way.</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="icon-badge orange"><Icon name="users" /></div>
+          <h3>Panels are a proxy</h3>
+          <p>Survey panels recruit whoever is willing and rely on what respondents remember. Your real target is rarely who you end up hearing from.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge orange"><Icon name="target" /></div>
+          <h3>Pixels miss the real world</h3>
+          <p>Privacy changes have weakened online tracking, and pixels were never able to measure out-of-home, venues or store visits anyway.</p>
+        </div>
+        <div class="card">
+          <div class="icon-badge orange"><Icon name="scale" /></div>
+          <h3>Sellers grade their own work</h3>
+          <p>When the company selling the media also measures it, the results are hard to trust. Independent measurement removes that question.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Studies -->
+  <section class="section" id="studies">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow">Our studies</span>
+        <h2>Four ways to know what is working</h2>
+        <p class="lead">Every study starts with an audience defined by where people actually go: your customers, a competitor's customers, venue visitors or a trade area.</p>
+      </div>
+      <div class="grid grid-2">
+        {products.map((p) => (
+          <a href={`/products/${p.slug}`} class="card product-card">
+            <div class="icon-badge"><Icon name={p.icon} /></div>
+            <h3>{p.name}</h3>
+            <p>{p.short}</p>
+            <span class="more">Learn more <Icon name="arrow" size={16} /></span>
+          </a>
+        ))}
+      </div>
+      <div class="addon-strip">
+        <span class="pill">Add-on</span>
+        <p><strong>Retargeting audiences.</strong> Turn any study audience into activation-ready segments from opt-in devices, ready for your DSP or social platforms.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="section alt">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>From real-world behaviour to a clear answer</h2>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Define the audience</h3><p>Pick the behaviour that matters: visitors to your stores, a competitor, a venue type or a trade area.</p></div>
+        <div class="step"><h3>Verify with location data</h3><p>We build matched test and control groups from 40M+ privacy-compliant Canadian devices.</p></div>
+        <div class="step"><h3>Survey or observe</h3><p>Short, unbranded surveys capture perception, or we observe real visits after exposure.</p></div>
+        <div class="step"><h3>Deliver the answer</h3><p>Significance-tested results in an executive-ready report, plus optional activation audiences.</p></div>
+      </div>
+      <p class="center" style="margin-top:32px"><a href="/how-it-works" class="btn btn-secondary">See our methodology</a></p>
+    </div>
+  </section>
+
+  <!-- Independence -->
+  <section class="section">
+    <div class="container split">
+      <div>
+        <span class="eyebrow">Independent by design</span>
+        <h2>We don't buy media. We measure it.</h2>
+        <p class="lead">RadiusAds is a research and measurement company only. Your team or your agency runs the campaign. We tell you, objectively, what it did.</p>
+        <ul class="checklist">
+          <li>No media commissions, so no reason to inflate results</li>
+          <li>Works alongside any agency, any channel, any DSP</li>
+          <li>Built for out-of-home, DOOH, venues and digital alike</li>
+          <li>Statistical significance reported on every study</li>
+        </ul>
+      </div>
+      <div class="grid audience-cards">
+        <div class="card">
+          <span class="pill">For brands</span>
+          <h3>Know what your spend actually did</h3>
+          <p>Get independent answers on awareness, recall, creative and store visits, measured on the customers you are trying to win.</p>
+          <a href="/contact?type=brand">Talk to us about your brand <Icon name="arrow" size={16} /></a>
+        </div>
+        <div class="card">
+          <span class="pill orange-pill">For agencies</span>
+          <h3>Win the pitch. Prove the plan.</h3>
+          <p>Co-pitch with us or white-label our studies under your brand. You keep 100% of the media; we add the proof.</p>
+          <a href="/agencies">See agency options <Icon name="arrow" size={16} /></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Privacy -->
+  <section class="section alt tight">
+    <div class="container privacy-row">
+      <div class="icon-badge"><Icon name="shield" /></div>
+      <div>
+        <h3>Privacy-compliant from the ground up</h3>
+        <p>Our location data is anonymized and aggregated, uses no personally identifiable information, and is sourced from opt-in devices in line with PIPEDA and Quebec Law 25. All study data is stored in Canada.</p>
+      </div>
+      <a href="/privacy" class="btn btn-secondary">Our approach</a>
+    </div>
+  </section>
+
+  <CtaBand />
+</Layout>
+
+<style>
+  .hero { padding: 72px 0 96px; background: linear-gradient(180deg, var(--green-tint) 0%, #fff 90%); overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 960px) { .hero-grid { grid-template-columns: 1fr; } }
+  .hl { color: var(--green); }
+  .hero .lead { margin-bottom: 28px; }
+  .proof { list-style: none; padding: 0; margin: 40px 0 0; display: flex; gap: 36px; flex-wrap: wrap; }
+  .proof strong { display: block; font-family: var(--font-display); font-size: 1.6rem; color: var(--ink); line-height: 1.1; }
+  .proof span { font-size: .88rem; color: var(--muted); }
+  .product-card { text-decoration: none; color: inherit; transition: border-color .15s, box-shadow .15s, transform .15s; }
+  .product-card:hover { border-color: var(--green); box-shadow: 0 16px 36px rgba(18,48,42,.08); transform: translateY(-2px); }
+  .more { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--green-dark); margin-top: 8px; }
+  .addon-strip { margin-top: 24px; display: flex; gap: 16px; align-items: center; padding: 20px 24px; border-radius: var(--radius); background: var(--orange-tint); }
+  .addon-strip p { margin: 0; }
+  .addon-strip .pill { background: var(--orange); color: #fff; flex-shrink: 0; }
+  @media (max-width: 640px) { .addon-strip { flex-direction: column; align-items: flex-start; } }
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+  @media (max-width: 960px) { .split { grid-template-columns: 1fr; } }
+  .split .lead { margin-bottom: 24px; }
+  .audience-cards { grid-template-columns: 1fr; gap: 18px; }
+  .audience-cards h3 { margin-top: 12px; }
+  .audience-cards a { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; text-decoration: none; }
+  .orange-pill { background: var(--orange-tint); color: var(--orange-dark); }
+  .privacy-row { display: flex; gap: 24px; align-items: center; }
+  .privacy-row .icon-badge { flex-shrink: 0; margin: 0; }
+  .privacy-row p { margin: 0; }
+  .privacy-row h3 { margin-bottom: .3em; }
+  @media (max-width: 760px) { .privacy-row { flex-direction: column; align-items: flex-start; } }
+</style>
