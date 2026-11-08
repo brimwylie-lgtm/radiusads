@@ -2,6 +2,7 @@
 export const products = [
   {
     slug: 'awareness-studies',
+    survey: true,
     name: 'Awareness Studies',
     short: 'Know where your brand stands with the shoppers who matter, before you spend.',
     tagline: 'A baseline of awareness and perception among a location-verified audience.',
@@ -13,7 +14,7 @@ export const products = [
     how: [
       ['Define the audience', 'Choose the behaviour that matters: competitor shoppers, category visitors, venue attendees, or a custom trade area.'],
       ['Build the cohort', 'We isolate devices that match, using up to 24 months of privacy-compliant location history.'],
-      ['Survey', 'A short, unbranded survey measures awareness, consideration, perception and preference.'],
+      ['Invite and survey', 'Your agency runs a small invitation campaign to the cohort. A short, unbranded survey measures awareness, consideration, perception and preference.'],
       ['Report', 'Results are benchmarked against a comparison audience and delivered in a clear executive report.'],
     ],
     outputs: [
@@ -32,6 +33,7 @@ export const products = [
   },
   {
     slug: 'brand-lift',
+    survey: true,
     name: 'Brand Lift Studies',
     short: 'Prove what your campaign changed: recall, awareness, favourability and intent.',
     tagline: 'Exposed vs. unexposed, measured on audiences verified by real-world behaviour.',
@@ -43,7 +45,7 @@ export const products = [
     how: [
       ['Map exposure', 'We identify devices with an opportunity to see your media, based on presence near screens, boards, venues or in targeted areas.'],
       ['Match a control', 'A comparable unexposed group is built from the same audience profile and geography.'],
-      ['Survey both groups', 'Identical unbranded surveys measure recall, awareness, favourability and intent.'],
+      ['Survey both groups', 'Invitation campaigns reach both groups, and identical unbranded surveys measure recall, awareness, favourability and intent.'],
       ['Measure lift', 'Differences are tested for statistical significance and reported with confidence levels.'],
     ],
     outputs: [
@@ -62,6 +64,7 @@ export const products = [
   },
   {
     slug: 'creative-testing',
+    survey: true,
     name: 'Creative Testing',
     short: 'Pick the winning concept before the media budget is committed.',
     tagline: 'Test concepts with the exact audience you plan to reach.',
@@ -73,7 +76,7 @@ export const products = [
     how: [
       ['Define the target', 'Select the behaviour-based audience your campaign is meant to win.'],
       ['Load concepts', 'Two to four concepts, from rough boards to finished ads.'],
-      ['Randomized exposure', 'Each respondent sees one concept in an unbranded environment, then answers the same questions.'],
+      ['Invite and expose', 'An invitation campaign brings the target audience to the survey, where each respondent sees one concept at random and answers the same questions.'],
       ['Rank and recommend', 'Concepts are compared on appeal, clarity, persuasion and intent to switch.'],
     ],
     outputs: [

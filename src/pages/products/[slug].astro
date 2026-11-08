@@ -29,7 +29,7 @@ const others = products.filter((o) => o.slug !== p.slug);
         <div class="price">
           <span>Pricing</span>
           <strong>{p.price}</strong>
-          <small>Final pricing depends on audience, markets and sample size.</small>
+          <small>Final pricing depends on audience, markets and sample size.{p.survey && " Survey invitation media is bought by your team or agency and scoped in the proposal."}</small>
         </div>
       </aside>
     </div>
