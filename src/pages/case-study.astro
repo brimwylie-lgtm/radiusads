@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+import CtaBand from '../components/CtaBand.astro';
+---
+<Layout title="Case Study: In-Arena Campaign Footfall" description="How a sports media network proved its in-arena campaign drove restaurant visits, using year-over-year footfall attribution with network, non-network and general population comparisons.">
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="/">Home</a> / Case Study</div>
+      <span class="eyebrow">Case study &middot; Footfall Attribution</span>
+      <h1>Proving an in-arena campaign drove restaurant visits</h1>
+      <p class="lead">A sports media network needed to show a national advertiser that its first in-arena campaign changed real-world behaviour. We measured it, and the advertiser renewed.</p>
+      <div class="btn-row" style="margin-top:28px">
+        <a href="/radiusads-case-study.pdf" class="btn btn-primary" download>Download PDF</a>
+        <a href="/contact" class="btn btn-secondary">Start a Study</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tight">
+    <div class="container">
+      <div class="glance">
+        <div><span>Client</span><strong>Sports media network with digital screens in community arenas</strong></div>
+        <div><span>Advertiser</span><strong>National casual dining chain</strong></div>
+        <div><span>Study</span><strong>Footfall Attribution, year over year</strong></div>
+        <div><span>Turnaround</span><strong>Under 2 weeks</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="container stats-wrap">
+      <div class="stat big">
+        <strong>+35.9%</strong>
+        <span>Year-over-year growth in visits from network arenas, compared with arenas outside the network</span>
+      </div>
+      <div class="stat">
+        <strong>+204%</strong>
+        <span>Growth vs. a general population benchmark</span>
+      </div>
+      <div class="stat">
+        <strong>+12.1%</strong>
+        <span>Visits from network arenas to the chain, Jan to Apr, year over year</span>
+      </div>
+      <div class="stat">
+        <strong>Renewed</strong>
+        <span>Advertiser renewed with the network for 2027</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container narrow prose">
+      <h2>The challenge</h2>
+      <p>The advertiser ran its first in-arena campaign with the network. Ahead of renewal, both sides wanted a clear answer to a simple question: did more people go from these arenas to the restaurants than the year before?</p>
+      <p>Impressions and attendance could not answer that. The network needed evidence of real-world behaviour change, presented in a way a national marketing team would trust.</p>
+
+      <h2>What we did</h2>
+      <ul class="checklist">
+        <li><strong>Used a natural baseline.</strong> The campaign ran in year two but not year one, so we compared the same January to April period across both years.</li>
+        <li><strong>Measured the exposed venues.</strong> We tracked visits from the network's arenas to the chain's locations in both periods.</li>
+        <li><strong>Built two comparison groups.</strong> Arenas outside the network showed what happened without the campaign. A random general population sample provided the benchmark used to index visitation.</li>
+        <li><strong>Reported trends, not headcounts.</strong> All results were indexed percentage changes from privacy-compliant, aggregated location data.</li>
+        <li><strong>Made it shareable.</strong> We delivered a concise summary the network could put straight in front of the advertiser, in under two weeks.</li>
+      </ul>
+
+      <h2>The results</h2>
+      <ul class="checklist">
+        <li>Visits from network arenas to the chain rose <strong>12.1%</strong> year over year (Jan to Apr), with March up <strong>13.6%</strong> and April up <strong>39.6%</strong>.</li>
+        <li>Over the same period, visits from arenas outside the network <strong>fell 1.3%</strong>.</li>
+        <li>Year over year, the network's arenas grew visits <strong>35.9%</strong> more than arenas outside the network, and <strong>204%</strong> more than the general population benchmark.</li>
+        <li>The advertiser <strong>renewed for 2027</strong>.</li>
+      </ul>
+
+      <h2>Why it matters</h2>
+      <p>Out-of-home and venue media have always struggled to connect exposure to outcomes. With a clean baseline and the right comparison groups, the network could show measurable growth in real visits, not just impressions, and turn a first-time advertiser into a returning one.</p>
+
+      <div class="method-note">
+        <Icon name="shield" size={22} />
+        <p>This study was conducted by the Measured Reporting team that powers RadiusAds. Client and advertiser names are withheld. All data is anonymized, aggregated and privacy-compliant.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt tight">
+    <div class="container center">
+      <h3>Measure your campaign the same way</h3>
+      <div class="btn-row" style="justify-content:center;margin-top:16px">
+        <a href="/products/footfall-attribution" class="btn btn-secondary">About Footfall Attribution</a>
+        <a href="/agencies" class="btn btn-secondary">For Agencies &amp; Media Owners</a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand title="Need to prove your network or campaign worked?" text="Tell us about the campaign, the venues and the timing. We will design the comparison and get you the answer." />
+</Layout>
+
+<style>
+  .narrow { max-width: 820px; }
+  .glance { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .glance div { padding: 22px 24px; border-right: 1px solid var(--line); }
+  .glance div:last-child { border-right: 0; }
+  .glance span { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin-bottom: 6px; }
+  .glance strong { color: var(--ink); font-weight: 600; font-size: .98rem; line-height: 1.4; display: block; }
+  @media (max-width: 860px) { .glance { grid-template-columns: 1fr 1fr; } .glance div:nth-child(2) { border-right: 0; } .glance div:nth-child(-n+2) { border-bottom: 1px solid var(--line); } }
+  @media (max-width: 520px) { .glance { grid-template-columns: 1fr; } .glance div { border-right: 0; border-bottom: 1px solid var(--line); } }
+  .stats-wrap { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 20px; }
+  @media (max-width: 960px) { .stats-wrap { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .stats-wrap { grid-template-columns: 1fr; } }
+  .stat { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+  .stat strong { display: block; font-family: var(--font-display); font-size: 2.2rem; color: var(--green-dark); line-height: 1.1; margin-bottom: 8px; }
+  .stat span { font-size: .93rem; }
+  .stat.big { background: var(--green); border-color: var(--green); color: rgba(255,255,255,.9); }
+  .stat.big strong { color: #fff; font-size: 2.8rem; }
+  .prose .checklist li { margin-bottom: 14px; }
+  .method-note { display: flex; gap: 14px; align-items: flex-start; margin-top: 36px; padding: 18px 20px; background: var(--bg-alt); border-radius: 12px; color: var(--muted); font-size: .92rem; }
+  .method-note :global(svg) { flex-shrink: 0; color: var(--green-dark); margin-top: 2px; }
+  .method-note p { margin: 0; }
+</style>

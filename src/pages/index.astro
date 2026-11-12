@@ -79,6 +79,24 @@ import { products } from '../data/products.js';
     </div>
   </section>
 
+  <!-- Proof -->
+  <section class="section tight">
+    <div class="container">
+      <a href="/case-study" class="proof-card">
+        <div class="proof-text">
+          <span class="eyebrow">Case study</span>
+          <h2>An in-arena campaign, proven in real visits</h2>
+          <p>A sports media network used our Footfall Attribution study to show a national dining chain its campaign drove more restaurant visits year over year. The advertiser renewed.</p>
+          <span class="more">Read the case study <Icon name="arrow" size={16} /></span>
+        </div>
+        <div class="proof-stat">
+          <strong>+35.9%</strong>
+          <span>visit growth vs. arenas outside the network</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
   <!-- How it works -->
   <section class="section alt">
     <div class="container">
@@ -158,6 +176,12 @@ import { products } from '../data/products.js';
   .addon-strip p { margin: 0; }
   .addon-strip .pill { background: var(--orange); color: #fff; flex-shrink: 0; }
   @media (max-width: 640px) { .addon-strip { flex-direction: column; align-items: flex-start; } }
+  .proof-card { display: grid; grid-template-columns: 1.6fr 1fr; gap: 40px; align-items: center; text-decoration: none; color: inherit; border: 1px solid var(--line); border-radius: 20px; padding: 44px; background: linear-gradient(120deg, #fff 0%, var(--green-tint) 100%); transition: border-color .15s, box-shadow .15s; }
+  .proof-card:hover { border-color: var(--green); box-shadow: 0 16px 36px rgba(18,48,42,.08); }
+  .proof-text p { max-width: 560px; }
+  .proof-stat { background: var(--green); color: rgba(255,255,255,.9); border-radius: 16px; padding: 32px; text-align: center; }
+  .proof-stat strong { display: block; font-family: var(--font-display); font-size: 3.2rem; color: #fff; line-height: 1; margin-bottom: 10px; }
+  @media (max-width: 860px) { .proof-card { grid-template-columns: 1fr; padding: 28px; } }
   .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
   @media (max-width: 960px) { .split { grid-template-columns: 1fr; } }
   .split .lead { margin-bottom: 24px; }
